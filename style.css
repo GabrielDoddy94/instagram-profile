@@ -1,0 +1,132 @@
+:root {
+  --instagram-light-grey: #fafafa;
+  --instagram-grey: rgb(143, 143, 143);
+  --instagram-blue: #4094ef;
+  --instagram-black: #262626;
+  --instagram-red: #dc565b;
+  --instagram-link: #133768;
+  --color-white: #ffffff;
+  --color-border: #dbdbdb;
+}
+
+/* Global */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-weight: 500;
+  color: var(--instagram-black);
+  line-height: 1.5;
+  box-sizing: border-box;
+  background-color: var(--instagram-light-grey);
+}
+
+.container {
+  max-width: 104rem;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* HEADER */
+.header {
+  background-color: var(--color-white);
+  padding: 1rem 0;
+}
+.header__flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo-box {
+  position: relative;
+  top: 0.5rem;
+}
+
+.header__logo {
+  display: inline-block;
+}
+
+.form {
+  position: relative;
+}
+
+.form__input {
+  width: 21rem;
+  background-color: var(--instagram-light-grey);
+  border: 2px solid var(--color-border);
+  border-radius: 3px;
+  padding: 0.5rem;
+}
+
+.search__icon {
+  height: 1.1rem;
+  display: inline-block;
+}
+
+.form__label {
+  position: absolute;
+  top: 0.7rem;
+  right: 7.5rem;
+  width: 6rem;
+  font-size: 1.4rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--instagram-grey);
+  line-height: 1.7rem;
+  cursor: pointer;
+}
+
+.form__input:focus + .form__label {
+  opacity: 0;
+}
+
+.header__list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.header__item {
+  position: relative;
+}
+
+.header__item:not(:last-child) {
+  margin-right: 2.5rem;
+}
+
+.header__link,
+.circle-blue {
+  display: inline-block;
+}
+
+.header__link-notification:after {
+  content: '5';
+  text-align: center;
+  color: var(--color-white);
+  font-size: 1.1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  top: -0.5rem;
+  left: 1.2rem;
+  display: inline-block;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 50%;
+  background-color: var(--instagram-red);
+}
+
+.circle-blue {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  background-color: var(--instagram-blue);
+}
