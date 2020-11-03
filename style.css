@@ -23,6 +23,7 @@ html {
 }
 
 body {
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: 500;
   color: var(--instagram-black);
   line-height: 1.5;
@@ -31,7 +32,7 @@ body {
 }
 
 .container {
-  max-width: 104rem;
+  max-width: 90rem;
   width: 90%;
   margin: 0 auto;
 }
@@ -82,11 +83,11 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   color: var(--instagram-grey);
   line-height: 1.7rem;
-  cursor: pointer;
+  cursor: text;
 }
 
-.form__input:focus + .form__label {
-  opacity: 0;
+.form__input:valid + .form__label {
+  display: none;
 }
 
 .header__list {
@@ -122,6 +123,11 @@ body {
   width: 1.5rem;
   border-radius: 50%;
   background-color: var(--instagram-red);
+  transition: transform 0.3s;
+}
+
+.header__link-notification:hover:after {
+  transform: scale(1.1);
 }
 
 .circle-blue {
@@ -129,4 +135,123 @@ body {
   width: 2rem;
   border-radius: 50%;
   background-color: var(--instagram-blue);
+}
+
+.header__link-icon {
+  transition: transform 0.3s;
+}
+
+.header__link-icon:hover {
+  transform: scale(1.2);
+}
+
+/* PROFILE */
+.section-profile {
+  margin-top: 4rem;
+}
+
+.profile__flex {
+  display: flex;
+  justify-content: space-around;
+}
+
+.profile__avatar-box {
+  height: 15rem;
+  width: 15rem;
+  color: #fff;
+  background-color: #000;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.profile__information-box {
+  width: 60%;
+}
+
+.profile__information-1 {
+  display: flex;
+  align-items: center;
+}
+
+.profile__name {
+  display: inline-block;
+  font-size: 2.6rem;
+  margin-right: 2.5rem;
+}
+
+.profile__text {
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+
+.btn {
+  display: inline-block;
+  border-radius: 3px;
+  background-color: var(--instagram-blue);
+  color: var(--color-white);
+}
+
+.btn:hover {
+  background-color: #2182ec;
+}
+
+.profile__btn-follow {
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding: 0.4rem 3.2rem;
+  margin-right: 0.8rem;
+}
+
+.profile__btn-select {
+  padding: 0.7rem 1.3rem;
+  margin-right: 1.25rem;
+}
+
+.profile__ellipse {
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.profile__information-2 {
+  margin: 1.5rem 0;
+}
+
+.profile__information-2 > span:not(:last-child) {
+  margin-right: 2.5rem;
+}
+
+.profile__link {
+  color: var(--instagram-link);
+}
+
+.avatar-section {
+  position: relative;
+  padding: 5rem 0;
+  display: flex;
+}
+
+.avatar-section > .avatar:first-child {
+  margin-left: 4rem;
+}
+
+.avatar-section > .avatar:not(:first-child) {
+  margin-left: 4rem;
+}
+
+.avatar {
+  height: 8rem;
+  width: 8rem;
+  border-radius: 50%;
+  background-color: #000;
+  border: 4px double var(--color-border);
+}
+
+.avatar:after {
+  content: 'Name';
+  display: inline-block;
+  position: absolute;
+  top: 14rem;
+  font-size: 1.2rem;
+  font-weight: bold;
 }

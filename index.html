@@ -20,7 +20,13 @@
           </div>
 
           <form action="#" class="form">
-            <input type="text" name="search" id="search" class="form__input" />
+            <input
+              type="text"
+              name="search"
+              id="search"
+              class="form__input"
+              required
+            />
             <label for="search" class="form__label"
               ><img
                 src="/images/search.svg"
@@ -78,6 +84,55 @@
           </nav>
         </div>
       </header>
+
+      <section class="section-profile">
+        <div class="container">
+          <div class="profile__flex">
+            <div class="profile__avatar-box">AVATAR</div>
+
+            <div class="profile__information-box">
+              <div class="profile__information-1">
+                <span class="profile__name">name</span>
+                <a href="#" class="btn profile__btn-follow">Follow</a>
+                <a href="#" class="btn profile__btn-select"
+                  ><img src="/images/arrow-down.svg" alt="#"
+                /></a>
+                <span class="profile__ellipse">&bull; &bull; &bull;</span>
+              </div>
+
+              <div class="profile__information-2">
+                <span class="profile__text profile__posts"
+                  ><b>79</b> posts</span
+                >
+                <span class="profile__text profile__followers"
+                  ><b>379</b> followers</span
+                >
+                <span class="profile__text profile__following">
+                  <b>179</b> following</span
+                >
+              </div>
+
+              <div class="profile__information-3">
+                <p class="profile__text paragraph-1"><b>Name</b></p>
+                <p class="profile__text paragraph-2">
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text.
+                </p>
+                <a href="#" class="profile__text profile__link"
+                  ><b> bit.ly/35Ce3mX</b></a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="avatar-section">
+            <div class="avatar"></div>
+            <div class="avatar"></div>
+            <div class="avatar"></div>
+          </div>
+        </div>
+      </section>
     </main>
   </body>
 </html>
