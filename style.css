@@ -7,6 +7,8 @@
   --instagram-link: #133768;
   --color-white: #ffffff;
   --color-border: #dbdbdb;
+
+  --font-size-profile: 1.7rem;
 }
 
 /* Global */
@@ -145,9 +147,21 @@ body {
   transform: scale(1.2);
 }
 
+.burger {
+  cursor: pointer;
+  display: none;
+}
+
+.burger > div {
+  background-color: #000;
+  height: 0.5rem;
+  width: 3rem;
+  margin: 0.5rem;
+}
+
 /* PROFILE */
 .section-profile {
-  margin-top: 4rem;
+  margin: 4rem 0;
 }
 
 .profile__flex {
@@ -162,10 +176,15 @@ body {
   background-color: #000;
   border-radius: 50%;
   text-align: center;
+  font-size: 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .profile__information-box {
-  width: 60%;
+  flex: 0 0 60%;
 }
 
 .profile__information-1 {
@@ -179,16 +198,12 @@ body {
   margin-right: 2.5rem;
 }
 
-.profile__text {
-  font-size: 1.7rem;
-  font-weight: 500;
-}
-
 .btn {
   display: inline-block;
   border-radius: 3px;
   background-color: var(--instagram-blue);
   color: var(--color-white);
+  transition: background-color 0.3s;
 }
 
 .btn:hover {
@@ -221,21 +236,26 @@ body {
   margin-right: 2.5rem;
 }
 
+.profile__text {
+  font-size: 1.7rem;
+}
+
+.font-strong {
+  font-weight: 700;
+}
+
 .profile__link {
   color: var(--instagram-link);
 }
 
-.avatar-section {
+.avatar-box {
   position: relative;
   padding: 5rem 0;
+
   display: flex;
 }
 
-.avatar-section > .avatar:first-child {
-  margin-left: 4rem;
-}
-
-.avatar-section > .avatar:not(:first-child) {
+.avatar-box > .avatar {
   margin-left: 4rem;
 }
 
@@ -245,13 +265,163 @@ body {
   border-radius: 50%;
   background-color: #000;
   border: 4px double var(--color-border);
+
+  position: relative;
 }
 
-.avatar:after {
-  content: 'Name';
-  display: inline-block;
+.avatar span {
   position: absolute;
-  top: 14rem;
+  top: 8.5rem;
+  right: 2rem;
+  font-size: 1.4rem;
+}
+
+/* SECTION POST */
+.section-post {
+}
+
+.post__link-box {
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--color-border);
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.post__link {
+  text-decoration: none;
+  text-transform: uppercase;
   font-size: 1.2rem;
   font-weight: bold;
+  color: var(--instagram-black);
+  letter-spacing: 0.1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.post__link:first-of-type {
+  margin-right: 6rem;
+}
+
+.post__link:first-of-type::after {
+  content: '';
+  display: inline-block;
+  border-top: 0.1rem solid var(--instagram-black);
+  width: 65px;
+  position: absolute;
+  top: -0.1rem;
+}
+
+.post__link-icon {
+  margin-right: 0.5rem;
+}
+
+.post__photos-box {
+  min-height: 100vh;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.post__photos {
+  flex: 0 0 285px;
+
+  background-color: var(--instagram-black);
+  height: 25rem;
+  margin-bottom: 2rem;
+  color: var(--color-white);
+  font-size: 3rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 61.25em) {
+  html {
+    font-size: 60%;
+  }
+
+  .post__photos-box {
+    justify-content: space-around;
+  }
+
+  .post__photos {
+    flex: 0 0 300px;
+  }
+
+  .form__input {
+  }
+}
+
+@media only screen and (max-width: 50em) {
+  .header__navigation {
+    display: none;
+  }
+
+  .burger {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 44.5em) {
+  .post__photos {
+    flex: 0 0 80%;
+  }
+}
+
+@media only screen and (max-width: 39.375em) {
+  html {
+    font-size: 55%;
+  }
+
+  .form__label {
+    top: 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 35.625em) {
+  html {
+    font-size: 50%;
+  }
+
+  .profile__avatar-box {
+    height: 12rem;
+    width: 12rem;
+    font-size: 1.5rem;
+  }
+
+  .profile__text {
+    font-size: 1.5rem;
+  }
+
+  .avatar {
+    height: 6rem;
+    width: 6rem;
+  }
+
+  .avatar span {
+    top: 5.5rem;
+    right: 1rem;
+  }
+
+  .form__label {
+    top: 0.9rem;
+  }
+}
+
+@media only screen and (max-width: 28.75em) {
+  html {
+    font-size: 40%;
+  }
+
+  .form__label {
+    top: 1.2rem;
+  }
 }
